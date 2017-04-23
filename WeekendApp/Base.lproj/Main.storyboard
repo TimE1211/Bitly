@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YoD-2p-OrC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bitly View Controller-->
+        <scene sceneID="vMT-EQ-qwN">
+            <objects>
+                <viewController id="v7c-1i-uJi" customClass="BitlyViewController" customModule="WeekendApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dPF-0a-Luc"/>
+                        <viewControllerLayoutGuide type="bottom" id="nPI-rd-Lwy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Ts-b7-mpg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xa-YD-Hhj">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YxN-8e-Snv"/>
+                                    <barButtonItem systemItem="add" id="LLn-re-Aar">
+                                        <connections>
+                                            <action selector="addNewLinkWithSender:" destination="v7c-1i-uJi" id="YmA-xZ-F7G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lcr-Id-Znp"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b9d-Ug-gn0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BitlyCell" id="9QG-gK-S8Z" customClass="BitlyCell" customModule="WeekendApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9QG-gK-S8Z" id="gUJ-DP-l1k" customClass="BitlyCell" customModule="WeekendApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter URL here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EfR-zw-JRG">
+                                                    <rect key="frame" x="10" y="0.0" width="355" height="22"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="v7c-1i-uJi" id="raa-Vm-JnF"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYa-By-Id8">
+                                                    <rect key="frame" x="15" y="22" width="355" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EfR-zw-JRG" firstAttribute="top" secondItem="gUJ-DP-l1k" secondAttribute="top" id="1KK-vp-5Nv"/>
+                                                <constraint firstItem="zYa-By-Id8" firstAttribute="width" secondItem="EfR-zw-JRG" secondAttribute="width" id="73d-7L-XIP"/>
+                                                <constraint firstItem="EfR-zw-JRG" firstAttribute="height" secondItem="gUJ-DP-l1k" secondAttribute="height" multiplier="0.5" id="S8u-2h-zxO"/>
+                                                <constraint firstItem="EfR-zw-JRG" firstAttribute="leading" secondItem="gUJ-DP-l1k" secondAttribute="leading" constant="10" id="UOc-WH-B1X"/>
+                                                <constraint firstItem="zYa-By-Id8" firstAttribute="top" secondItem="EfR-zw-JRG" secondAttribute="bottom" id="c0f-d3-GlJ"/>
+                                                <constraint firstItem="zYa-By-Id8" firstAttribute="leading" secondItem="EfR-zw-JRG" secondAttribute="leading" constant="5" id="fuY-gu-Yf3"/>
+                                                <constraint firstItem="zYa-By-Id8" firstAttribute="height" secondItem="EfR-zw-JRG" secondAttribute="height" id="jdW-yr-dca"/>
+                                                <constraint firstAttribute="trailing" secondItem="EfR-zw-JRG" secondAttribute="trailing" constant="10" id="uAC-pa-YLB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newURLLabel" destination="zYa-By-Id8" id="Mgh-SS-k2t"/>
+                                            <outlet property="urlTextField" destination="EfR-zw-JRG" id="DZt-sW-Qsk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="v7c-1i-uJi" id="EXY-hk-7wa"/>
+                                    <outlet property="delegate" destination="v7c-1i-uJi" id="2Mc-K5-el9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Xa-YD-Hhj" secondAttribute="trailing" id="Hcp-Vc-YS1"/>
+                            <constraint firstItem="5Xa-YD-Hhj" firstAttribute="top" secondItem="b9d-Ug-gn0" secondAttribute="bottom" id="Ikw-sK-OQA"/>
+                            <constraint firstItem="nPI-rd-Lwy" firstAttribute="top" secondItem="5Xa-YD-Hhj" secondAttribute="bottom" id="PuP-IQ-xoD"/>
+                            <constraint firstAttribute="trailing" secondItem="b9d-Ug-gn0" secondAttribute="trailing" id="UqM-Yq-7wF"/>
+                            <constraint firstItem="b9d-Ug-gn0" firstAttribute="top" secondItem="dPF-0a-Luc" secondAttribute="bottom" id="hIi-Sr-4P1"/>
+                            <constraint firstItem="b9d-Ug-gn0" firstAttribute="leading" secondItem="5Ts-b7-mpg" secondAttribute="leading" id="nAu-wf-Evy"/>
+                            <constraint firstItem="5Xa-YD-Hhj" firstAttribute="leading" secondItem="5Ts-b7-mpg" secondAttribute="leading" id="npH-8Q-PE0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NZR-cE-FKc"/>
+                    <connections>
+                        <outlet property="tableView" destination="b9d-Ug-gn0" id="1Ua-hf-rxz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0e-n9-Ye9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="-44.527736131934034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BAz-hv-a8D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YoD-2p-OrC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dfu-b7-R4f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v7c-1i-uJi" kind="relationship" relationship="rootViewController" id="Tsf-nj-Vqf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeE-wl-SqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784.8" y="-44.527736131934034"/>
+        </scene>
+    </scenes>
+</document>

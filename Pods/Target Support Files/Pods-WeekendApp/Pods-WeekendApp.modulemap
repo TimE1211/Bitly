@@ -1,0 +1,6 @@
+framework module Pods_WeekendApp {
+  umbrella header "Pods-WeekendApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
