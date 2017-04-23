@@ -85,8 +85,6 @@ class BitlyViewController: UIViewController, UITableViewDataSource, UITableViewD
     return 80
   }
   
-  
-  
   // MARK: - Table view delegate
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
@@ -155,7 +153,7 @@ class BitlyViewController: UIViewController, UITableViewDataSource, UITableViewD
 //    return false
 //  }
   
-  @IBAction func addNewLink(sender: UIBarButtonItem)
+  @IBAction func addNewLink(sender: UIBarButtonItem)        //david showed me how to create alerts here and I used them to create multiple buttons and alerts
   {
     let alert = UIAlertController(title: "Shorten Link", message: nil, preferredStyle: .alert)
     
@@ -194,12 +192,6 @@ class BitlyViewController: UIViewController, UITableViewDataSource, UITableViewD
     alert.addAction(cancelAction)
     
     present(alert, animated: true, completion: nil)
-    
-    
-    
-    
-    
-    
     
 //    let aLink = Link(longURL: "", shortURL: "")
 //    try! realm.write {
