@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,44 +37,29 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BitlyCell" id="9QG-gK-S8Z" customClass="BitlyCell" customModule="WeekendApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Pgq-hn-uZn" detailTextLabel="XeJ-fW-wKQ" style="IBUITableViewCellStyleSubtitle" id="iNr-z2-v5y">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9QG-gK-S8Z" id="gUJ-DP-l1k" customClass="BitlyCell" customModule="WeekendApp" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iNr-z2-v5y" id="iTz-1L-Np0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter URL here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EfR-zw-JRG">
-                                                    <rect key="frame" x="10" y="0.0" width="355" height="22"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pgq-hn-uZn">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="v7c-1i-uJi" id="raa-Vm-JnF"/>
-                                                    </connections>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYa-By-Id8">
-                                                    <rect key="frame" x="15" y="22" width="355" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XeJ-fW-wKQ">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="EfR-zw-JRG" firstAttribute="top" secondItem="gUJ-DP-l1k" secondAttribute="top" id="1KK-vp-5Nv"/>
-                                                <constraint firstItem="zYa-By-Id8" firstAttribute="width" secondItem="EfR-zw-JRG" secondAttribute="width" id="73d-7L-XIP"/>
-                                                <constraint firstItem="EfR-zw-JRG" firstAttribute="height" secondItem="gUJ-DP-l1k" secondAttribute="height" multiplier="0.5" id="S8u-2h-zxO"/>
-                                                <constraint firstItem="EfR-zw-JRG" firstAttribute="leading" secondItem="gUJ-DP-l1k" secondAttribute="leading" constant="10" id="UOc-WH-B1X"/>
-                                                <constraint firstItem="zYa-By-Id8" firstAttribute="top" secondItem="EfR-zw-JRG" secondAttribute="bottom" id="c0f-d3-GlJ"/>
-                                                <constraint firstItem="zYa-By-Id8" firstAttribute="leading" secondItem="EfR-zw-JRG" secondAttribute="leading" constant="5" id="fuY-gu-Yf3"/>
-                                                <constraint firstItem="zYa-By-Id8" firstAttribute="height" secondItem="EfR-zw-JRG" secondAttribute="height" id="jdW-yr-dca"/>
-                                                <constraint firstAttribute="trailing" secondItem="EfR-zw-JRG" secondAttribute="trailing" constant="10" id="uAC-pa-YLB"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="newURLLabel" destination="zYa-By-Id8" id="Mgh-SS-k2t"/>
-                                            <outlet property="urlTextField" destination="EfR-zw-JRG" id="DZt-sW-Qsk"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
