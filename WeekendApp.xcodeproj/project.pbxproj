@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2001ABEA1EAC03C500668511 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001ABE91EAC03C500668511 /* Link.swift */; };
-		2001ABEE1EAC276300668511 /* BitlyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001ABED1EAC276300668511 /* BitlyCell.swift */; };
 		2001ABF01EAC2BB900668511 /* BitlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001ABEF1EAC2BB900668511 /* BitlyViewController.swift */; };
 		20CCDDF81EABDE4800AAB6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCDDF71EABDE4800AAB6BA /* AppDelegate.swift */; };
 		20CCDDFD1EABDE4800AAB6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20CCDDFB1EABDE4800AAB6BA /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		2001ABE91EAC03C500668511 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		2001ABED1EAC276300668511 /* BitlyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitlyCell.swift; sourceTree = "<group>"; };
 		2001ABEF1EAC2BB900668511 /* BitlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitlyViewController.swift; sourceTree = "<group>"; };
 		20CCDDF41EABDE4800AAB6BA /* WeekendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20CCDDF71EABDE4800AAB6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				20CCDDF71EABDE4800AAB6BA /* AppDelegate.swift */,
 				2001ABEF1EAC2BB900668511 /* BitlyViewController.swift */,
 				2001ABE91EAC03C500668511 /* Link.swift */,
-				2001ABED1EAC276300668511 /* BitlyCell.swift */,
 				20CCDE091EABFEF400AAB6BA /* APIController.swift */,
 				20CCDDFB1EABDE4800AAB6BA /* Main.storyboard */,
 				20CCDDFE1EABDE4800AAB6BA /* Assets.xcassets */,
@@ -223,7 +220,6 @@
 			files = (
 				20CCDDF81EABDE4800AAB6BA /* AppDelegate.swift in Sources */,
 				20CCDE0A1EABFEF400AAB6BA /* APIController.swift in Sources */,
-				2001ABEE1EAC276300668511 /* BitlyCell.swift in Sources */,
 				2001ABEA1EAC03C500668511 /* Link.swift in Sources */,
 				2001ABF01EAC2BB900668511 /* BitlyViewController.swift in Sources */,
 			);
